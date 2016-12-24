@@ -10,7 +10,7 @@ function reverseArrayInPlace(array){
         console.log(array);
         //array.unshift(last);
 	};
-  //console.log(array);
+  //just testing commit
     console.log(array);
 	return array;
 }
