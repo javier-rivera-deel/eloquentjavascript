@@ -1,24 +1,19 @@
-function reverseArrayInPlace(){
-	var length = array.length;
-  //console.log(length);
-    var last;
-	for (var i = 0; i < length; i++) {
-        console.log(array);
-        last = array.pop();
-        array[i]
-        console.log("saco "+last);
-        console.log(array);
-        //array.unshift(last);
-	};
-  //just testing commit
-    console.log(array);
-	return array;
+function reverseArrayInPlace(array){
+        var length = Math.floor(array.length / 2);
+        var lastPlace;
+        var firstPlace;
+        var lastCount = array.length - 1;
+    for (var i = 0; i < length; i++) {
+        firstPlace = array[i];
+        lastPlace = array[lastCount];
+        
+        array[i] = lastPlace;
+        array[lastCount] = firstPlace;
+        
+        lastCount--;
+    };
+
 }
-
-var origin = [5,6,89,4];
-
-origin = reverseArrayInPlace(origin);
-console.log(origin);
 
 function reverse(array){
     var newArray = [];
