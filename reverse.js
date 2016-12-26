@@ -1,4 +1,4 @@
-function reverseArrayInPlace(array){
+function reverseArrayInPlace(){
 	var length = array.length;
   //console.log(length);
     var last;
@@ -19,3 +19,13 @@ var origin = [5,6,89,4];
 
 origin = reverseArrayInPlace(origin);
 console.log(origin);
+
+function reverse(array){
+    var newArray = [];
+        var length = array.length
+    for (var i = 0; i < length; i++) {
+        newArray[i] = array.pop();
+        }
+    return newArray;
+}rray;
+}
