@@ -3,17 +3,47 @@ function arrayToList(array){
 	var list = addItem(index);
 	
 	function addItem(index){
-		console.log("index "+index);
 		if(index < array.length){
 			return {value:array[index],rest:addItem(++index)}
 		}
-		else if(index ===array.length){
+		else{
 			return null;
 		}
-			
 	}
 	return list;
 }
-var arr = [1,2,3];
-var lista = arrayToList(arr);
-console.log(lista);
+
+function listToArray(list){
+	var array = [];
+	traverseObject(list);
+	function traverseObject(object){
+		if(object.rest){
+			array.push(object.value);
+			return traverseObject(object.rest);
+		}
+		else{
+			array.push(object.value);
+		}
+
+	}
+	return array;
+}
+
+
+var myList = {
+	value : 1,
+	rest :{
+		value : 2,
+		rest: {
+			value : 3,
+			rest : null
+		}
+	}
+}
+/*
+console.log(listToArray(myList));
+*/
+/*
+var arr = [10,20];
+console.log(arrayToList(arr));
+*/
