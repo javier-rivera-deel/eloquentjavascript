@@ -29,7 +29,7 @@ function listToArray(list){
 	return array;
 }
 
-
+//test linked list object 
 var myList = {
 	value : 1,
 	rest :{
@@ -40,10 +40,11 @@ var myList = {
 		}
 	}
 }
-/*
-console.log(listToArray(myList));
-*/
-/*
+//test array
 var arr = [10,20];
-console.log(arrayToList(arr));
-*/
+
+//test converting list to array
+//console.log(listToArray(myList));
+
+//test converting array to list
+//console.log(arrayToList(arr));
