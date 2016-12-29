@@ -29,6 +29,14 @@ function listToArray(list){
 	return array;
 }
 
+function prepend(element, list){
+	var newList = {
+		value : element,
+		rest : list
+	}
+	return newList;
+}
+
 //test linked list object 
 var myList = {
 	value : 1,
@@ -40,6 +48,19 @@ var myList = {
 		}
 	}
 }
+
+//test prepend
+//console.log(prepend(10,myList));
+console.log(prepend(10, prepend(20, null)));
+
+
+
+//console.log(prepend(10, prepend(20, null))); or console.log(prepend(10,someList))
+// → {value: 10, rest: {value: 20, rest: null}}
+
+
+
+
 //test array
 var arr = [10,20];
 
