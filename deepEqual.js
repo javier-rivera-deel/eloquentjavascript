@@ -1,11 +1,16 @@
 function deepEqual(valueA,valueB){
+	console.log(typeof valueA,typeof valueB);
 	if(valueA && valueB){
 		if(typeof valueA === "object" && typeof valueB === "object"){
+			//check length of properties
+			var countA = 0, countB = 0;
 			for(var propA in valueA){
-				for(var propB in valueB){
-					if()
-					deepEqual(valueA[propA], valueB[propB]);
-				}
+				countA += 1;
+			}
+			for(var propB in valueB){
+				countB += 1;
+			}
+			deepEqual(countA,countB);
 				/*
 				//iteracion produnda dentro de un objeto
 				if(typeof valueA[propA] === "object"){
@@ -16,13 +21,14 @@ function deepEqual(valueA,valueB){
 					console.log("propiedad: "+prop+",valor: "+ob[prop]);
 				}
 				*/
-			}
+		
 		}else if(valueA === valueB){
 			return true;
 		}else{
 			return false;
 		}
 		
+	
 	}else{
 		return false;
 	}
@@ -98,7 +104,7 @@ var otherObj = {
 };
 var obja = null;
 var objb = undefined
- 
+ console.log("ready");
 deepEqual(obj,otherObj);
 /*
 if(!obja){
